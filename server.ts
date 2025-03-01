@@ -388,21 +388,25 @@ app.post(
       }
 
       const mailOptions = {
-        from: `"E-Booth" <${process.env.EMAIL}>`, // Use a friendly sender name
+        from: `"E-Booth" <${process.env.EMAIL}>`, // Friendly sender name
         to: recipientEmail,
-        subject: "Your Photo Strip from Picapica 📸",
-        text: "Thanks for using Picapica! Here's your photo strip. We hope you had fun!",
+        subject: "Your E-Booth Photo Strip is Ready!",
+        text: "Your photo strip is here! Relive the fun and share your memories!",
         html: `
-      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;">
-        <h1 style="color: #000000; text-align: center;">Your E-Booth Photo Strip!</h1>
-        <div style="text-align: center; margin: 20px 0;">
-          <img src="cid:photostrip" alt="Photo Strip" style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" />
-        </div>
-        <p style="font-size: 14px; text-align: center; color: #777;">
-          © 2025 Kyle Pantig. All Rights Reserved.
-        </p>
-      </div>
-    `,
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333; background: #f9f9f9; border-radius: 10px;">
+            <h1 style="color: #222; text-align: center; font-size: 24px; margin-bottom: 10px;">Your E-Booth Photo Strip is Ready! 🎉</h1>
+            <p style="text-align: center; font-size: 16px; color: #555;">
+              Relive the fun and share your favorite moments!
+            </p>
+            <div style="text-align: center; margin: 20px 0;">
+              <img src="cid:photostrip" alt="Photo Strip" 
+                style="max-width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);" />
+            </div>
+            <p style="font-size: 12px; text-align: center; color: #888; margin-top: 30px;">
+              © 2025 E-Booth. All Rights Reserved.  
+            </p>
+          </div>
+        `,
         attachments: [
           {
             filename: "e-photo-strip.png",

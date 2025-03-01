@@ -370,11 +370,11 @@ app.post("/send-photo-strip", function (req, res) { return __awaiter(void 0, voi
                     return [2 /*return*/];
                 }
                 mailOptions = {
-                    from: "\"E-Booth\" <".concat(process.env.EMAIL, ">"), // Use a friendly sender name
+                    from: "\"E-Booth\" <".concat(process.env.EMAIL, ">"), // Friendly sender name
                     to: recipientEmail,
-                    subject: "Your Photo Strip from Picapica 📸",
-                    text: "Thanks for using Picapica! Here's your photo strip. We hope you had fun!",
-                    html: "\n      <div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333;\">\n        <h1 style=\"color: #000000; text-align: center;\">Your E-Booth Photo Strip!</h1>\n        <div style=\"text-align: center; margin: 20px 0;\">\n          <img src=\"cid:photostrip\" alt=\"Photo Strip\" style=\"max-width: 100%; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);\" />\n        </div>\n        <p style=\"font-size: 14px; text-align: center; color: #777;\">\n          \u00A9 2025 Kyle Pantig. All Rights Reserved.\n        </p>\n      </div>\n    ",
+                    subject: "Your E-Booth Photo Strip is Ready!",
+                    text: "Your photo strip is here! Relive the fun and share your memories!",
+                    html: "\n          <div style=\"font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; color: #333; background: #f9f9f9; border-radius: 10px;\">\n            <h1 style=\"color: #222; text-align: center; font-size: 24px; margin-bottom: 10px;\">Your E-Booth Photo Strip is Ready! \uD83C\uDF89</h1>\n            <p style=\"text-align: center; font-size: 16px; color: #555;\">\n              Relive the fun and share your favorite moments!\n            </p>\n            <div style=\"text-align: center; margin: 20px 0;\">\n              <img src=\"cid:photostrip\" alt=\"Photo Strip\" \n                style=\"max-width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.15);\" />\n            </div>\n            <p style=\"font-size: 12px; text-align: center; color: #888; margin-top: 30px;\">\n              \u00A9 2025 E-Booth. All Rights Reserved.  \n            </p>\n          </div>\n        ",
                     attachments: [
                         {
                             filename: "e-photo-strip.png",
